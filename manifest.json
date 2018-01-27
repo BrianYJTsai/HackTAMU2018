@@ -1,16 +1,28 @@
 {
   "manifest_version": 2,
-  "name": "Nee-Howdy",
+  "name": "Ni-Howdy",
   "version": "1.0",
-  "description": "Chrome extension for learning how to read.",
+  "description": "Chrome extension to help you learn how to read.",
+  "icons": {
+    "128": "default_icon.png",
+    "48": "default_icon.png",
+    "16": "default_icon.png"
+  },
 
   "browser_action": {
     "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_icon": "default_icon.png"
+  },
+
+  "background":{
+    "scripts": ["contextmenu.js"],
+    "persistent": false
   },
 
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "contextMenus"
   ]
+
 }
