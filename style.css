@@ -1,5 +1,5 @@
 body {
-  font-family: Helvetica Neue, Arial, sans-serif;
+  font-family: 'PT Sans', sans-serif;
   text-align: center;
 }
 
@@ -10,19 +10,70 @@ body {
 
 h1 {
   font-weight: 200;
-  font-size: 3em;
+  font-size: 5.4em;
   margin: 0 0 0.1em 0;
 }
 
 h2 {
   font-weight: 200;
-  font-size: 0.9em;
+  font-size: 1.6em;
   margin: 0 0 50px;
-  color: #999;
+  color: #b98684;
 }
 
 a {
-  margin-top: 50px;
+  margin-top: 10px;
   display: block;
-  color: #3e95cd;
+  color: #cd5f89;
 }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #db3032;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #b92a39;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: left;
+  left: 200px;
+  bottom: 500px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 132px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  left: 0px;
+  top: 51px;
+  overflow: auto;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

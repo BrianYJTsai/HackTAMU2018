@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Your Stats</title>
+    <title>YOUR STATS</title>
     <script src = "Chart.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <style>body{background-color: #c0dff7;}</style>
   <body>
 
-    <div class="wrapper">
-      <h1>Your Stats</h1>
+    <div class="wrapper", style = horizontalAlign:"left">
+      <h1>Ni-Howdy!</h1>
       <h2>Pronunciation accuracy on latest lesson.</h2>
 
       <canvas id="myChart" width = "400" height = "200"></canvas>
     </div>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="myFunction()">Missed Words</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#item1">word</a>
+        <a href="#item2">word2</a>
+        <a href="#item3">word3</a>
+        <a href="#item4">word4</a>
+        <a href="#item5">word5</a>
+<!-- extra: each word corresponds to a dictionary link -->
+
+      </div>
+
+    </div>
+
     <script src="script.js"></script>
 
   </body>
 </html>
+
+
+
+
+
+<!-- <script src="//localhost:35729/livereload.js"></script> -->

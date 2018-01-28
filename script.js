@@ -2,7 +2,7 @@ var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext('2d');
 
 Chart.defaults.global.defaultFontColor = 'black';
-Chart.defaults.global.defaultFontSize = 16;
+Chart.defaults.global.defaultFontSize = 18;
 var theHelp = Chart.helpers;
 
 var data = {
@@ -20,6 +20,12 @@ var data = {
 };
 
 var options = {
+    title: {
+        display: true,
+        text: 'YOUR STATS',
+        position: 'top',
+        horizontalAlign: "left",
+    },
     rotation: -0.7 * Math.PI,
     legend: {
         display: true,
@@ -41,6 +47,9 @@ var options = {
                         var fill = custom.backgroundColor ? custom.backgroundColor : getValueAtIndexOrDefault(ds.backgroundColor, i, arcOpts.backgroundColor);
                         var stroke = custom.borderColor ? custom.borderColor : getValueAtIndexOrDefault(ds.borderColor, i, arcOpts.borderColor);
                         var bw = custom.borderWidth ? custom.borderWidth : getValueAtIndexOrDefault(ds.borderWidth, i, arcOpts.borderWidth);
+
+
+
                         return {
                             // And finally :
                             text: ds.data[i] + "% " + label,
@@ -91,8 +100,8 @@ Chart.plugins.register({
                     // Just naively convert to string for now
                     var dataString = dataset.data[index].toString();
                     // Make sure alignment settings are correct
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'left';
                     var padding = 5;
                     var position = element.tooltipPosition();
                     ctx.fillText(dataString + '%', position.x, position.y - (fontSize / 2) - padding);
@@ -101,3 +110,9 @@ Chart.plugins.register({
         });
     }
 });
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
