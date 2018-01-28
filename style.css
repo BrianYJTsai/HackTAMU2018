@@ -1,11 +1,7 @@
-body {
-  font-family: 'PT Sans', sans-serif;
-  text-align: center;
-}
-
 #myChart {
   position: absolute;
-  right: 50%
+  right: 50%;
+  float: left;
 }
 .wrapper {
   max-width: 800px;
@@ -30,4 +26,22 @@ a {
   margin-top: 10px;
   display: block;
   color: #cd5f89;
+}
+
+.word_wrapper {
+  position: absolute;
+  left: 50%;
+  float: right;
+}
+
+#transcribe {
+  max-width: 500px;
+  text-align: justify;
+  color: #54514b;
+
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
 }
