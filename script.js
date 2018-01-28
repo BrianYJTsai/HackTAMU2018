@@ -113,6 +113,7 @@ Chart.plugins.register({
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+
+$('.dropdown-content a').on("click", function() {
     document.getElementById("myDropdown").classList.toggle("show");
-}
+});
