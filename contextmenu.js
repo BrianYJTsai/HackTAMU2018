@@ -7,10 +7,16 @@ var contextMenuItem = {
 
 chrome.contextMenus.create(contextMenuItem);
 
+chrome.browserAction.onClicked.addListener(function (tab) {
+    chrome.tabs.create({ 'url': chrome.extension.getURL('index.html') }, function (tab) {
+    });
+});
 
 chrome.contextMenus.onClicked.addListener(function(clickText){
         if (clickText.menuItemId == "readOutLoud" && clickText.selectionText){
                 var text = window.getSelection().toString();
+
+            chrome.notifications.create('limitNotif', notifOptions);
                 chrome.storage.sync.get(['whole','end'], function(Listen){
                 var ProAccuracy = 0;
                 if(Listen.total){
