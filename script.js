@@ -15,7 +15,13 @@ Chart.defaults.global.defaultFontSize = 18;
 var theHelp = Chart.helpers;
 
 var ratio = localStorage.getItem("ratio").split(" ");
-//alert(ratio);
+var message = localStorage.getItem("message", message);
+var incorrectWords = localStorage.getItem("incorrectWords").split(",");
+var correctWords = localStorage.getItem("correctWords").split(",");
+//alert(message);
+document.getElementById('transcribe').innerText = "Lorem Ipsum is simply dummy text of the printing and " +
+    "typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, " +
+    "when an unknown printer took a galley of type and scrambled it to make a type specimen book."
 var data = {
     labels: ["Perfect! ", "Needs Work"],
     datasets: [{
@@ -24,7 +30,7 @@ var data = {
             'rgba(230, 191, 163, 1)',
             'rgba(124, 34, 43, 1)'
         ],
-        data: ratio,
+        data: [45, 55],
         borderColor: ['white', 'white'],
         borderWidth: [2, 2]
     }]
