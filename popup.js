@@ -4,11 +4,11 @@ $(document).click(function() {
 });*/
 
 $("#selectedText").on("click", function() {
-   var text = "";
-   if (window.getSelection) {
-       text = window.getSelection().toString();
-   }
-   //alert(text);
+    var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    }
+    //alert(text);
 
 
 });
