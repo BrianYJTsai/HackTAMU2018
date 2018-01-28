@@ -1,0 +1,33 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+#myChart {
+    position: absolute;
+    right: 50%
+}
+.wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 5.4em;
+    margin: 0 0 0.1em 0;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 1.6em;
+    margin: 0 0 50px;
+    color: #b98684;
+}
+
+a {
+    margin-top: 10px;
+    display: block;
+    color: #cd5f89;
+}

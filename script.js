@@ -1,3 +1,12 @@
+//chrome.browserAction.onClicked.addListener(function(tab) { alert('icon clicked')});
+/*chrome.tabs.create({'url': chrome.extension.getURL('popup.html')}, function(tab) {
+
+});*/
+chrome.browserAction.onClicked.addListener(function (tab) {
+    chrome.tabs.create({ 'url': chrome.extension.getURL('index.html')}, function(tab) {
+    });
+});
+
 var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext('2d');
 
@@ -5,6 +14,8 @@ Chart.defaults.global.defaultFontColor = 'black';
 Chart.defaults.global.defaultFontSize = 18;
 var theHelp = Chart.helpers;
 
+var ratio = localStorage.getItem("ratio").split(" ");
+//alert(ratio);
 var data = {
     labels: ["Perfect! ", "Needs Work"],
     datasets: [{
@@ -13,7 +24,7 @@ var data = {
             'rgba(230, 191, 163, 1)',
             'rgba(124, 34, 43, 1)'
         ],
-        data: [45, 55],
+        data: ratio,
         borderColor: ['white', 'white'],
         borderWidth: [2, 2]
     }]
@@ -74,7 +85,6 @@ var myPieChart = new Chart(ctx, {
     data: data,
     options: options
 });
-
 console.log(myPieChart.generateLegend());
 
 
@@ -109,11 +119,4 @@ Chart.plugins.register({
             }
         });
     }
-});
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-
-$('.dropdown-content a').on("click", function() {
-    document.getElementById("myDropdown").classList.toggle("show");
 });
